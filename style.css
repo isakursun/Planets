@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(images/bg.jpeg);
+    background-position: center;
+    background-size: cover;
+    padding: 0 30px;
+    box-sizing: border-box;
+    position: relative;
+    
+}
+.navbar{
+    
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+}
+.logo{
+    width: 80px;
+    cursor: pointer;
+    transform: scaleX(-1);
+    border-radius: 50%;
+    margin-top: 20px;
+
+}
+.logo:hover{
+    width: 90px;
+    transition: .3s;
+}
+.bi{
+    font-size: 40px;
+    cursor: pointer;
+    color: white;
+    display: none;
+}
+.bi:hover{
+    font-size: 50px;
+    transition: .3s;
+}
+nav{
+    
+    flex: 1;
+    text-align: right;
+}
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    position: relative;
+}
+nav ul li a::before{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    background-color: white;
+    margin-top: 25px;
+}
+nav ul li a:hover::before{
+    width: 100%;
+    transition: .3s;
+}
+
+/*content*/
+.row{
+    
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 100%;
+    width: 95%;
+    gap: 20px;
+    color: white;
+    overflow: auto;
+    align-items: center;
+}
+.col{
+    flex-basis: 45%
+}
+h1{
+    font-size: 70px;
+}
+p{
+    font-size: 15px;
+    line-height: 20px;
+}
+.card p{
+    font-size: 10px;
+}
+button{
+    width: 180px;
+    color: black;
+    font-size: 15px;
+    padding: 12px 0;
+    background-color: white;
+    border: 0;
+    border-radius: 20px;
+    outline: 0;
+    margin-top: 30px;
+}
+button:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    transition: .3s;
+}
+.col-card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.card{
+    
+    padding: 15px;
+    cursor: pointer;
+    margin: 15px;
+    box-sizing: border-box;
+    transition: transform .5s;
+    height: 250px;
+    border-radius: 10px;
+}
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 10px white;
+}
+#venus{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images/venus.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#dunya{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images/dunya.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+#merkur{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images/merkur.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+#mars{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images/mars.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+@media (max-width:768px) { 
+    .bi{
+        display: flex;
+    }
+    nav{
+        display: none;
+    }
+    .row{
+        display: block;
+    }
+    .card{
+        height: 200px;
+        transition: .3s;
+        margin-left: 0;
+    }
+    h1{
+        font-size: 50px;
+    }
+    .col p{
+        font-size: 13px;
+    }
+    button{
+        margin-top: 10px;
+        width: 100px ;
+    }
+}
